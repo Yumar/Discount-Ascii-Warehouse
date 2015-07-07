@@ -17,13 +17,34 @@ angular.module('store')
                             sort: sort
                         }
                     })
-                    .success(function (data) {
-                        o.products = data;
-                    }).error(function (data) {
-                        o.products = [];
-                    });
+                            .success(function (data) {
+                                o.products = data;
+                            })
+                            .error(function (data) {
+                                o.products = [];
+                            });
                 };
 
                 return o;
             }])
+        .controller('ProductsController', ['products', '$scope', function ($products, $scope) {
+                var skip = 0;
+                $scope.products = [];
+        
+                $scope.loadProducts = function(){
+                    skip +=20;
+                };
+                
+        }])
+        .directive('whenScrolled', function () {
+            return function (scope, elm, attr) {
+                var raw = elm[0];
+
+                elm.bind('scroll', function () {
+                    if (raw.scrollTop + raw.offsetHeight >= raw.scrollHeight) {
+                        scope.$apply(attr.whenScrolled);
+                    }
+                });
+            };
+        });
         
