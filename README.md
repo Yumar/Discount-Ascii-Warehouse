@@ -62,3 +62,7 @@ Please zip up your files and email them back.
 We are looking for idiomatic use of javascript, and the ability to solve the problems with code that is clean and easy to read. Even though it's very small in scope, please show us how you would use the language and conventions to structure things in a clear and maintainable way.
 
 We won't be considering any visual aspect (except for those defined in the requirements).  Just enough CSS to get the basic layout.
+
+http://blog.codeleak.pl/2016/03/quickstart-angular2-with-typescript-and.html
+http://blog.scottlogic.com/2015/12/24/creating-an-angular-2-build.html
+http://chariotsolutions.com/blog/post/typescript-angular2-starter-project-walkthrough-integrating-typescript/
